@@ -11,6 +11,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 firebaseApp.auth().onAuthStateChanged( user =>{
   if(user){
+    store.dispatch('signIn',user)
     router.push('/')
   }else{
     router.replace('/signin')
