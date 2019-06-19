@@ -7,6 +7,7 @@
     >
     Signout
     </b-button>
+    <AddEvent/>
   </div>
 </template>
 <script src="./Dashboard.js"></script>

@@ -1,6 +1,6 @@
 <template>
   <b-container fluid>
-    <h1>Sign Up</h1>
+    <h1>Registrarse</h1>
     <hr>
     <b-alert 
       variant="danger"
@@ -36,7 +36,7 @@
       variant="success"
       @click="SignUp"
     >
-    Signup
+    Registrarse
     </b-button>
     <br><br>
     <b-row class="text-center">
