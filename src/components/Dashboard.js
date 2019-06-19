@@ -1,5 +1,6 @@
 import { firebaseApp, eventsRef } from '../firebaseApp'
 import AddEvent from './AddEvent.vue'
+import EventItem from './EventItem.vue'
 
 export default {
   methods: {
@@ -14,9 +15,11 @@ export default {
       snap.forEach(event_ob => {
         events.push(event_ob.val())
       })
+      this.$store.dispatch('setEvents',events)
     })
   },
   components:{
-    AddEvent
+    AddEvent,
+    EventItem
   }
 }

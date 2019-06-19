@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: {}
+    user: {},
+    events: []
   },
   mutations: {
     ['SIGN_IN'] (state, user){
@@ -13,6 +14,9 @@ export default new Vuex.Store({
     },
     ['SIGN_OUT'] (state){
       state.user = {}
+    },
+    ['SET_EVENTS'] (state, events){
+      state.events = events
     }
   },
   actions: {
@@ -21,6 +25,9 @@ export default new Vuex.Store({
     },
     signOut({commit}){
       commit('SIGN_OUT')
+    },
+    setEvents({commit}, events ){
+      commit('SET_EVENTS',events)
     },
   }
 })
