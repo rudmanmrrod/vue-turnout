@@ -1,14 +1,7 @@
-import { firebaseApp, eventsRef } from '../firebaseApp'
-import AddEvent from './AddEvent.vue'
+import { eventsRef } from '../firebaseApp'
 import EventItem from './EventItem.vue'
 
 export default {
-  methods: {
-    signOut(){
-      this.$store.dispatch('signOut')
-      firebaseApp.auth().signOut()
-    }
-  },
   mounted(){
     eventsRef.on('value',snap => {
       let events = []
@@ -19,7 +12,6 @@ export default {
     })
   },
   components:{
-    AddEvent,
     EventItem
   }
 }

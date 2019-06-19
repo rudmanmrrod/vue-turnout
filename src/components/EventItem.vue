@@ -1,5 +1,5 @@
 <template>
-  <b-col sm-4>
+  <b-col sm="4">
     <b-card :title="event.title">
       <b-card-text>
         {{ event.description }}
