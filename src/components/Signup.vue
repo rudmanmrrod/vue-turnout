@@ -1,6 +1,6 @@
 <template>
   <b-container fluid>
-    <h1>Sign In</h1>
+    <h1>Sign Up</h1>
     <hr>
     <b-alert 
       variant="danger"
@@ -33,17 +33,17 @@
       </b-form-group>
     </b-form>
     <b-button 
-      variant="primary"
-      @click="SignIn"
+      variant="success"
+      @click="SignUp"
     >
-    Signin
+    Signup
     </b-button>
     <br><br>
     <b-row class="text-center">
       <b-col> 
-        <router-link to="signup">Tienes un usuario? Regístrate acá</router-link>
-      </b-col>
+        <router-link to="signin">Ingresa aquí</router-link>
+      </b-col> 
     </b-row>
   </b-container>
 </template>
-<script src="./Signin.js"></script>
+<script src="./Signup.js"></script>
