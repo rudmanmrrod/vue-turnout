@@ -13,7 +13,7 @@
       <b-navbar-nav class="ml-auto">
 
         <b-nav-item-dropdown right>
-          <template slot="button-content"><em>{{user}}</em></template>
+          <template slot="button-content"><em>{{$store.state.user.email}}</em></template>
           <b-dropdown-item @click="signOut">Sign Out</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
@@ -25,23 +25,10 @@ import { firebaseApp } from '../firebaseApp'
 import router from '../router'
 
 export default{
-  data(){
-    return {
-      user: this.getUser()
-    }
-  },
   methods:{
     signOut(){
       this.$store.dispatch('signOut')
       firebaseApp.auth().signOut()
-    },
-    getUser(){
-      try{
-        this.user = this.$store.state.user.email.split('@')[0]
-      }
-      catch(error){
-        this.user = {}
-      }
     },
     home(){
       router.push('/')
