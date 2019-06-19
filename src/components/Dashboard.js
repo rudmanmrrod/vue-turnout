@@ -11,10 +11,9 @@ export default {
   mounted(){
     eventsRef.on('value',snap => {
       let events = []
-      snap.forEach(event_ob =>{
+      snap.forEach(event_ob => {
         events.push(event_ob.val())
       })
-      console.log(events)
     })
   },
   components:{
