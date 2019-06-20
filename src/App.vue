@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <NavBar v-show="$store.state.user" />
-    {{$store.state.user}}
+    <NavBar v-show="$store.state.user.email" />
     <router-view/>
   </div>
 </template>
